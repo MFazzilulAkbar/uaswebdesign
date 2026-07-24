@@ -1,0 +1,393 @@
+:root {
+    --navy: #0f172a;
+    --dark-bg: #0b0f19;
+    --dark-card: #1e293b;
+    --accent-purple: #E040FB;
+    --accent-purple-hover: #d030eb;
+    --text-muted: #94a3b8;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #f8fafc;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page-view {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.page-view.active {
+    display: block;
+    opacity: 1;
+}
+
+.navbar {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-purple) !important;
+}
+
+.hero-section {
+    padding: 120px 0 90px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(11, 15, 25, 1) 100%);
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+
+.card-custom {
+    background-color: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(224, 64, 251, 0.25);
+    border-color: rgba(224, 64, 251, 0.4);
+}
+
+.card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    height: 190px;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.card-custom:hover .card-img-top {
+    filter: brightness(1.05);
+}
+
+.btn-purple {
+    background-color: var(--accent-purple);
+    color: #ffffff !important;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 14px rgba(224, 64, 251, 0.39);
+    transition: all 0.2s ease;
+}
+
+.btn-purple:hover {
+    background-color: var(--accent-purple-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(224, 64, 251, 0.5);
+}
+
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+.badge {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.text-purple {
+    color: var(--accent-purple) !important;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-purple);
+}
+
+/* ==========================================================================
+   SECTION PAKET / BILLING - CUSTOM STYLES
+   ========================================================================== */
+
+/* Efek Glow pada Badge Header */
+#page-paket .badge {
+    box-shadow: 0 0 10px rgba(224, 64, 251, 0.3);
+    letter-spacing: 0.8px;
+}
+
+/* Styling Kartu Paket */
+#page-paket .card-custom {
+    background-color: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Kartu saat di-hover (Efek Terangkat & Lampu Neon) */
+#page-paket .card-custom:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(224, 64, 251, 0.35) !important;
+    border-color: rgba(224, 64, 251, 0.6) !important;
+}
+
+/* Highlight Khusus untuk Paket Paling Populer (Paket Malam) */
+#page-paket .card-custom[style*="border: 1px solid #E040FB"] {
+    background: linear-gradient(180deg, #1e293b 0%, #171d31 100%);
+    box-shadow: 0 4px 20px rgba(224, 64, 251, 0.2);
+}
+
+/* Typography Harga */
+#page-paket h2[style*="color: #E040FB"] {
+    text-shadow: 0 0 12px rgba(224, 64, 251, 0.4);
+}
+
+/* List Fasilitas di dalam Kartu */
+#page-paket .list-unstyled li {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #cbd5e1;
+}
+
+#page-paket .list-unstyled li i {
+    font-size: 0.9rem;
+}
+
+/* Tombol Pesan Kursi pada Kartu Paket */
+#page-paket .btn-purple {
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(224, 64, 251, 0.4);
+    transition: all 0.3s ease;
+}
+
+#page-paket .btn-purple:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(224, 64, 251, 0.6);
+}
+
+/* ==========================================================================
+   STYLE KHUSUS HALAMAN TENTANG & FASILITAS (#page-tentang)
+   ========================================================================== */
+
+/* Efek Card Fasilitas */
+#page-tentang .row .p-4 {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#page-tentang .row .p-4:hover {
+    transform: translateY(-5px);
+    border-color: #E040FB !important;
+    box-shadow: 0 10px 20px rgba(224, 64, 251, 0.15);
+}
+
+/* Lingkaran Icon Fasilitas */
+#page-tentang .rounded-circle {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#page-tentang .row .p-4:hover .rounded-circle {
+    transform: scale(1.1);
+    background: rgba(224, 64, 251, 0.25) !important;
+}
+
+/* Styling Utama Section Kontak (Dark Theme & Neon Accent) */
+.contact-section {
+    background-color: #0b0c16;
+    /* Warna background dark disesuaikan dengan gambar */
+    color: #ffffff;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Header & Tag */
+.badge-tag {
+    background-color: rgba(217, 70, 239, 0.15);
+    color: #d946ef;
+    border: 1px solid #d946ef;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.contact-info h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.contact-desc {
+    color: #a1a1aa;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Kartu Informasi */
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #131525;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-card .icon {
+    font-size: 1.5rem;
+    background: rgba(217, 70, 239, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.info-card h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.info-card p {
+    margin: 0;
+    color: #a1a1aa;
+    font-size: 0.9rem;
+}
+
+/* Styling Form Box */
+.contact-form-wrapper {
+    background-color: #131525;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(217, 70, 239, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: #d1d5db;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: #0b0c16;
+    border: 1px solid #27272a;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d946ef;
+    box-shadow: 0 0 8px rgba(217, 70, 239, 0.4);
+}
+
+/* Tombol Kirim Pink Neon */
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(90deg, #d946ef, #a855f7);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.6);
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
