@@ -149,16 +149,14 @@ html {
 }
 
 /* ==========================================================================
-    SECTION PAKET / BILLING - CUSTOM STYLES
-    ========================================================================== */
+   SECTION PAKET / BILLING - CUSTOM STYLES
+   ========================================================================== */
 
-/* Efek Glow pada Badge Header */
 #page-paket .badge {
     box-shadow: 0 0 10px rgba(224, 64, 251, 0.3);
     letter-spacing: 0.8px;
 }
 
-/* Styling Kartu Paket */
 #page-paket .card-custom {
     background-color: var(--dark-card);
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -168,20 +166,17 @@ html {
     overflow: hidden;
 }
 
-/* Kartu saat di-hover (Efek Terangkat & Lampu Neon) */
 #page-paket .card-custom:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 30px rgba(224, 64, 251, 0.35) !important;
     border-color: rgba(224, 64, 251, 0.6) !important;
 }
 
-/* Highlight Khusus untuk Paket Paling Populer */
 #page-paket .card-custom[style*="border: 1px solid #E040FB"] {
     background: linear-gradient(180deg, #1e293b 0%, #171d31 100%);
     box-shadow: 0 4px 20px rgba(224, 64, 251, 0.2);
 }
 
-/* Typography Harga & Baris Pricelist */
 #page-paket h2[style*="color: #E040FB"] {
     text-shadow: 0 0 12px rgba(224, 64, 251, 0.4);
 }
@@ -208,7 +203,6 @@ html {
     background: rgba(224, 64, 251, 0.08);
 }
 
-/* Styling Kotak Paket Waktu Khusus (Pagi/Malam/Nokturnal) */
 #page-paket .special-packages {
     background-color: #0b0f19 !important;
     border: 1px dashed rgba(224, 64, 251, 0.3);
@@ -217,7 +211,6 @@ html {
     font-size: 0.85rem;
 }
 
-/* List Fasilitas di dalam Kartu */
 #page-paket .list-unstyled li {
     display: flex;
     align-items: center;
@@ -229,7 +222,6 @@ html {
     font-size: 0.9rem;
 }
 
-/* Tombol Pesan Kursi pada Kartu Paket */
 #page-paket .btn-purple {
     border-radius: 50px;
     font-weight: 600;
@@ -244,8 +236,8 @@ html {
 }
 
 /* ==========================================================================
-    STYLE KHUSUS HALAMAN TENTANG & FASILITAS (#page-tentang)
-    ========================================================================== */
+   STYLE KHUSUS HALAMAN TENTANG & FASILITAS (#page-tentang)
+   ========================================================================== */
 
 #page-tentang .row .p-4 {
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
