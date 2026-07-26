@@ -149,8 +149,8 @@ html {
 }
 
 /* ==========================================================================
-   SECTION PAKET / BILLING - CUSTOM STYLES
-   ========================================================================== */
+    SECTION PAKET / BILLING - CUSTOM STYLES
+    ========================================================================== */
 
 /* Efek Glow pada Badge Header */
 #page-paket .badge {
@@ -175,15 +175,46 @@ html {
     border-color: rgba(224, 64, 251, 0.6) !important;
 }
 
-/* Highlight Khusus untuk Paket Paling Populer (Paket Malam) */
+/* Highlight Khusus untuk Paket Paling Populer */
 #page-paket .card-custom[style*="border: 1px solid #E040FB"] {
     background: linear-gradient(180deg, #1e293b 0%, #171d31 100%);
     box-shadow: 0 4px 20px rgba(224, 64, 251, 0.2);
 }
 
-/* Typography Harga */
+/* Typography Harga & Baris Pricelist */
 #page-paket h2[style*="color: #E040FB"] {
     text-shadow: 0 0 12px rgba(224, 64, 251, 0.4);
+}
+
+#page-paket .pricing-options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#page-paket .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #cbd5e1;
+    transition: background 0.2s ease;
+}
+
+#page-paket .price-row:hover {
+    background: rgba(224, 64, 251, 0.08);
+}
+
+/* Styling Kotak Paket Waktu Khusus (Pagi/Malam/Nokturnal) */
+#page-paket .special-packages {
+    background-color: #0b0f19 !important;
+    border: 1px dashed rgba(224, 64, 251, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.85rem;
 }
 
 /* List Fasilitas di dalam Kartu */
@@ -213,10 +244,9 @@ html {
 }
 
 /* ==========================================================================
-   STYLE KHUSUS HALAMAN TENTANG & FASILITAS (#page-tentang)
-   ========================================================================== */
+    STYLE KHUSUS HALAMAN TENTANG & FASILITAS (#page-tentang)
+    ========================================================================== */
 
-/* Efek Card Fasilitas */
 #page-tentang .row .p-4 {
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -227,7 +257,6 @@ html {
     box-shadow: 0 10px 20px rgba(224, 64, 251, 0.15);
 }
 
-/* Lingkaran Icon Fasilitas */
 #page-tentang .rounded-circle {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -237,10 +266,9 @@ html {
     background: rgba(224, 64, 251, 0.25) !important;
 }
 
-/* Styling Utama Section Kontak (Dark Theme & Neon Accent) */
+/* Styling Utama Section Kontak */
 .contact-section {
     background-color: #0b0c16;
-    /* Warna background dark disesuaikan dengan gambar */
     color: #ffffff;
     padding: 80px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -255,7 +283,6 @@ html {
     align-items: center;
 }
 
-/* Header & Tag */
 .badge-tag {
     background-color: rgba(217, 70, 239, 0.15);
     color: #d946ef;
@@ -282,7 +309,6 @@ html {
     line-height: 1.6;
 }
 
-/* Kartu Informasi */
 .info-items {
     display: flex;
     flex-direction: column;
@@ -317,7 +343,6 @@ html {
     font-size: 0.9rem;
 }
 
-/* Styling Form Box */
 .contact-form-wrapper {
     background-color: #131525;
     padding: 35px;
@@ -364,7 +389,6 @@ html {
     box-shadow: 0 0 8px rgba(217, 70, 239, 0.4);
 }
 
-/* Tombol Kirim Pink Neon */
 .btn-submit {
     width: 100%;
     background: linear-gradient(90deg, #d946ef, #a855f7);
@@ -384,7 +408,6 @@ html {
     box-shadow: 0 0 15px rgba(217, 70, 239, 0.6);
 }
 
-/* Responsif untuk Layar HP */
 @media (max-width: 768px) {
     .contact-container {
         grid-template-columns: 1fr;
