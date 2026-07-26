@@ -104,8 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const subject = document.getElementById('subject')?.value || '';
             const message = document.getElementById('message')?.value || '';
 
-            // Nomor Tujuan WhatsApp Admin Arena (Ganti sesuai nomor WhatsApp Anda)
-            const phoneNumber = "6281234567890";
+            // Nomor Tujuan WhatsApp Admin Arena (Disamakan dengan tombol booking)
+            const phoneNumber = "6281280027111";
 
             // Format Pesan WhatsApp
             const waText = `Halo Immortal Arena!%0A` +
